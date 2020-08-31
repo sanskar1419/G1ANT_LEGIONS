@@ -1,0 +1,112 @@
+Goibibo.click search get_sign_in by id
+delay 2
+Goibibo.click search form-control by id
+♥Mobailnumber = ♥credential⟦Goibibo:Mobailnumber⟧
+Goibibo.type ♥Mobailnumber search mobileSubmitBtn by id
+delay 5
+Goibibo.click search mobileSubmitBtn by id
+Goibibo.waitforvalue ‴return document.getElementByClassName(inputSrch).length >0‴ expectedvalue true
+-Enter the code send on mobaile
+Goibibo.click search //*[@id="authOtpSubmitBtn"] by xpath
+delay 5
+-Search for Train
+Goibibo.click search //*[@id="header"]/div[1]/ul/li[2]/a/span by xpath
+Goibibo.waitforvalue ‴return document.getElementByClassName(inputSrch).length >0‴ expectedvalue true
+♥path = ‴♥environment⟦USERPROFILE⟧\Desktop\Date of flight\flight.xlsx‴
+⊂
+  System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(♥path));
+⊃
+xlsx.open ♥path createifnotexist true
+♥header = From❚Destination❚Departure❚Return❚Travellernoumber 
+
+call FileExcel list ♥header
+
+Goibibo.runscript ‴return document.getElementByClassName(inputSrch).length‴ ♥websiteRecordNumber
+♥websiteRecordNumber =⟦integer⟧♥websiteRecordNumber
+
+♥i = 1
+♥excelRowNumber = 1
+
+while ⊂♥i < ♥websiteRecordNumber && ♥excelRowNumber <=15⊃
+Goibibo.gettext search //*[@id="gosuggest_inputSrc"] by xpath result ♥from
+Goibibo.gettext search //*[@id="gosuggest_inputDest"] by xpath result ♥destination
+if⊂!♥from.contain(‴N>A‴) && !♥destination.contain(‴N>A‴)⊃
+♥from = ⟦float⟧♥from
+♥destination = ⟦float⟧♥destination
+
+if⊂♥from >3 && ♥destination >30⊃
+Goibibo.gettext search //*[@id="departureCalendar"] by xpath result ♥Departure
+list.create ‴♥excelRowNumber♥from❚♥destination❚♥Departure❚⊂{♥from*0.05+♥destination}⊃‴ type text result ♥rowvalue
+
+call FillExcel rownumber⊂♥excelRowNumber+1⊃ list ♥rowvalue
+end if
+end if
+♥i = ♥i + 1
+end while
+xlsx.close
+Goibibo.close 
+procedure FillExcel rownumber 1 list ⟦list:text⟧a❚b❚c
+
+for ♥j from 1 to ⊂♥list.count⊃
+xlsx.setvalue value ♥list⟦♥j⟧ row ♥rownumber colindex ♥j
+end for
+
+end procedure 
+
+Goibibo.click //*[@id="gi_search_btn"] by xpath
+Goibibo.waitforvalue ‴return document.getElementByClassName(//*[@id="content"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div/div[2]/span[2]/span/input).length >0‴ expectedvalue true
+Goibibo.click //*[@id="content"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div/div[2]/span[2]/span/input by xpath
+
+♥path = ‴♥environment⟦USERPROFILE⟧\Desktop\travel\TravellData.xlsx‴
+⊂
+  System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(♥path));
+⊃
+xlsx.open ♥path createifnotexist true
+♥header = name❚title❚email❚mobailnumber 
+
+call FileExcel list ♥header
+
+Goibibo.runscript ‴return document.getElementByClassName(inputSrch).length‴ ♥websiteRecordNumber
+♥websiteRecordNumber =⟦integer⟧♥websiteRecordNumber
+
+♥i = 1
+♥excelRowNumber = 1
+
+while ⊂♥i < ♥websiteRecordNumber && ♥excelRowNumber <=15⊃
+Goibibo.gettext search //*[@id="AdultfirstName1"] by xpath result ♥name
+Goibibo.gettext search //*[@id="AdultlastName1"] result ♥title
+if⊂!♥name.contain(‴N>A‴) && !♥title.contain(‴N>A‴)⊃
+♥name = ⟦float⟧♥name
+♥title = ⟦float⟧♥title
+
+if⊂♥name>3 && ♥title >30⊃
+Goibibo.gettext search //*[@id="email"] by xpath result ♥Email
+list.create ‴♥excelRowNumber♥name❚♥title❚♥Email❚⊂{♥from*0.05+♥destination}⊃‴ type text result ♥rowvalue
+
+call FillExcel rownumber⊂♥excelRowNumber+1⊃ list ♥rowvalue
+end if
+end if
+♥i = ♥i + 1
+end while
+xlsx.close
+Goibibo.close 
+procedure FillExcel rownumber 1 list ⟦list:text⟧a❚b❚c
+
+for ♥j from 1 to ⊂♥list.count⊃
+xlsx.setvalue value ♥list⟦♥j⟧ row ♥rownumber colindex ♥j
+end for
+
+end procedure 
+Goibibo.click //*[@id="travellerForm"]/div[2]/button/div by xpath
+
+list.create text ♥path result ♥attachments 
+mail.smtp host ♥credential⟦mail:host⟧ login ♥credential⟦mail:address⟧ password ♥credential⟦mail:password⟧ from ♥credential⟦mail:address⟧ to ‴sanskarguptabaisali@gmail.com‴ subject ‴Flight Booking Information‴ body ‴Here is the booking Details‴ attachments ♥attachmentsaddon python version 4.1.0.0
+addon appium version 4.105.0.0
+addon addon version 1.0.0.0
+addon xlsx version 4.104.0.0
+addon selenium version 4.104.0.0
+addon net version 4.104.0.0
+addon msoffice version 4.104.0.0
+addon iexplorer version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
