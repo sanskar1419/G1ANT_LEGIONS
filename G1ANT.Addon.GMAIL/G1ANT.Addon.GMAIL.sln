@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G1ANT.Addon.GMAIL", "G1ANT.Addon.GMAIL\G1ANT.Addon.GMAIL.csproj", "{062E656A-F377-42BD-9EDD-9F1C9989EF27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{062E656A-F377-42BD-9EDD-9F1C9989EF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062E656A-F377-42BD-9EDD-9F1C9989EF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062E656A-F377-42BD-9EDD-9F1C9989EF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062E656A-F377-42BD-9EDD-9F1C9989EF27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90800284-96EB-4621-A416-49D125AD1832}
+	EndGlobalSection
+EndGlobal
