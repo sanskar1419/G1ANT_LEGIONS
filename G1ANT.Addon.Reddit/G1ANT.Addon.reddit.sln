@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G1ANT.Addon.reddit", "G1ANT.Addon.reddit\G1ANT.Addon.reddit.csproj", "{ADF03F79-D893-4671-98F4-D6D403D1D955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF03F79-D893-4671-98F4-D6D403D1D955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF03F79-D893-4671-98F4-D6D403D1D955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF03F79-D893-4671-98F4-D6D403D1D955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF03F79-D893-4671-98F4-D6D403D1D955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D598C80B-B205-4727-8A3E-9E1F63C3A0A7}
+	EndGlobalSection
+EndGlobal
