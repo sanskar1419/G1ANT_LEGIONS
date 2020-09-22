@@ -21,7 +21,7 @@ googlesheet.getvalue J5 result ♥mode
 googlesheet.getvalue K5 result ♥to
 googlesheet.getvalue M5 result ♥c
 -Goibibo
-Goibibo.login email ‴rpainternsg1ant@gmail.com‴ pword ‴g1antintern‴ search hi
+Goibibo.login email ‴sanskarguptabaisali@gmail.com‴ pword ‴178756@San‴ search hi
 delay 20
 if ♥mode==‴Flight‴
     Goibibo.flight op ‴1‴ depart ♥from arrival ♥to departdate ♥myDate cabin  ‴Economy‴ search hi
@@ -48,7 +48,7 @@ delay 10
 -Make my trip
     selenium.open type chrome url https://www.makemytrip.com.com/
     delay 5
-    window ✱ixigo✱ style maximize
+    window ✱makemytrip✱ style maximize
     selenium.click search //*[@id="content"]/div/div[1]/header/div/div[2]/span/span by xpath
     delay 5
     selenium.click search //*[@id="content"]/div/div[5]/div/div/div[2]/div[2]/div/div[3]/div[1]/span[2]/input by xpath
@@ -111,4 +111,4 @@ end
 - Send the confirmation mail as URL 
 gmail.login email ♥login pword ♥password search
 delay 20
-gmail.sendmails to ‴name@company.com‴ subject ‴Holiday Tour Plan‴ message ‴Sir, as per your requirements, we have sent you your dream package in the link attached (#attachlink). Kindly go through the details and please feel free to call us anytime soon. Thank you for choosing G1ANT Travel. We hope you enjoy your holiday. Thanks! Regards, XYZ‴
+gmail.sendmails to ‴name@g1ant.com‴ subject ‴Holiday Tour Plan‴ message ‴Sir, as per your requirements, we have sent you your dream package in the link attached (#attachlink). Kindly go through the details and please feel free to call us anytime soon. Thank you for choosing G1ANT Travel. We hope you enjoy your holiday. Thanks! Regards, XYZ‴
