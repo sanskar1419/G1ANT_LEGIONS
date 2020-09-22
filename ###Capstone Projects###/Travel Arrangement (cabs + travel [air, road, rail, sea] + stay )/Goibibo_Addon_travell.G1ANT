@@ -45,13 +45,13 @@ end
 Goibibo.package depart ♥from arrival ♥to search hi
 delay 10
 -Make My trip
-    selenium.open type chrome url https://www.ixigo.com/
+    selenium.open type chrome url https://www.makemytrip.com/
     delay 5
-    window ✱ixigo✱ style maximize
+    window ✱makemytrip✱ style maximize
     selenium.click search //*[@id="content"]/div/div[1]/header/div/div[2]/span/span by xpath
     delay 5
     selenium.click search //*[@id="content"]/div/div[5]/div/div/div[2]/div[2]/div/div[3]/div[1]/span[2]/input by xpath
-    keyboard ‴rpainternsg1ant@gmail.com‴
+    keyboard ‴sanskarguptabaisali@gmail.com‴
     selenium.click search //*[@id="content"]/div/div[5]/div/div/div[2]/div[2]/div/div[3]/div[2]/button/div by xpath
     keyboard ‴OTP‴
     selenium.click search //*[@id="content"]/div/div[5]/div/div/div[2]/div[2]/div/button/div by xpath
@@ -110,4 +110,4 @@ end
 - Send the confirmation mail as URL 
 gmail.login email ♥login pword ♥password search
 delay 20
-gmail.sendmails to ‴name@company.com‴ subject ‴Holiday Tour Plan‴ message ‴Sir, as per your requirements, we have sent you your dream package in the link attached (#attachlink). Kindly go through the details and please feel free to call us anytime soon. Thank you for choosing G1ANT Travel. We hope you enjoy your holiday. Thanks! Regards, XYZ‴
+gmail.sendmails to ‴name@g1ant.com‴ subject ‴Holiday Tour Plan‴ message ‴Sir, as per your requirements, we have sent you your dream package in the link attached (#attachlink). Kindly go through the details and please feel free to call us anytime soon. Thank you for choosing G1ANT Travel. We hope you enjoy your holiday. Thanks! Regards, XYZ‴
