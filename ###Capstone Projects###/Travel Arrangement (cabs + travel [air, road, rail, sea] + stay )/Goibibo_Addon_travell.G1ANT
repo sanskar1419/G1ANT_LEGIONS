@@ -7,7 +7,7 @@ addon language version 4.106.1.0
 gmail.open type chrome search
 ♥login = ♥credential⟦gmail:login⟧
 ♥password =  ♥credential⟦gmail:password⟧
-♥myDate = ⟦date:dd/MM/yyyy⟧31/08/2020
+♥myDate = ⟦date:dd/MM/yyyy⟧31/10/2020
 gmail.login email ♥login pword ♥password search
 delay 20
 gmail.sendmails to ‴sanskarguptabaisali@gmail.com‴ subject ‴Holiday Tour Plan‴ message ‴ Dear Sir, We are from G1ANT company who are responsible for organizing your holiday package. We provide both complete as well as user preferred packages for a nominal price. However, your package rates vary with your destinations. We will prefer the most optimized package tour for your preference. Please fill the Google Form Link and Update your choices (URL:https://docs.google.com/forms/d/e/1FAIpQLSdrLpgB_KHuSWv7vwsfS7JflQao1G36q6aGqlcexi07EFpT7Q/viewform?usp=sf_link). We will reach you soon with the best package. Have a great trip. Regards, XYZ‴ search
@@ -31,7 +31,7 @@ else if ♥mode==‴Bus‴
     Goibibo.bus depart ♥from destination ♥to departdate ♥myDate search hi
 end
 if ♥B==‴Y‴
-    Goibibo.hotel hotel ♥to checkin ♥myDate checkout ‴22/09/20‴ search hi
+    Goibibo.hotel hotel ♥to checkin ♥myDate checkout ‴22/10/20‴ search hi
     dialog ‴Hotel checked!‴
 else ♥B==‴N‴
     delay 10
